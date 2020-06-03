@@ -1,5 +1,5 @@
 class Admin::ProductsController < ApplicationController
-  http_basic_authenticate_with name: env[HTTP_AUTH_NAME], password: env[HTTP_AUTH_PASS], except: :no_auth 
+  http_basic_authenticate_with name: ENV[:HTTP_AUTH_NAME.to_s], password: ENV[:HTTP_AUTH_PASS.to_s], except: :no_auth 
 
   def no_auth
     render plain: "YOU ARE NOT AUTHORIZED"

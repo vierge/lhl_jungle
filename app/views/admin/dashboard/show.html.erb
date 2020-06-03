@@ -1,2 +1,14 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin::Dashboard</h1>
+
+<div class="statistics"> 
+  <div class="list-group">
+    <button class="list-group-item list-group-item-action"> 
+    <h4> # of Product Categories: <span class="badge badge-secondary"><%= @statistics[:categories_count].to_s %></span> </h4>
+    </button>
+    <%= link_to "admin/products" do %>
+      <button class="list-group-item list-group-item-action"> 
+      <h4> # of Total Products: <span class="badge badge-secondary"><%= @statistics[:product_count].to_s %></span> </h4>
+      </button>
+    <% end %>
+  </div>
+</div>
