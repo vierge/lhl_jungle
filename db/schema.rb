@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160625062916) do
 
   add_index "line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
+  add_index "line_items", ["created_at"], name: "order_line_items_by_creation_time", using: :btree
 
   create_table "orders", force: :cascade do |t|
     t.integer  "total_cents"

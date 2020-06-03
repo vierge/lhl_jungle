@@ -20,6 +20,9 @@ class ApplicationController < ActionController::Base
   end
   helper_method :cart_subtotal_cents
 
+  # def order_details
+  #   @order_details |item|= Product.where(id: order.product) {} <---- maybe a solution?
+
 
   def update_cart(new_cart)
     cookies[:cart] = {
